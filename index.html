@@ -4,31 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ژمێرەر</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        .calculator {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            max-width: 200px;
-            margin: 0 auto;
-        }
-        .calculator button {
-            padding: 20px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-        .calculator input {
-            grid-column: span 4;
-            padding: 20px;
-            font-size: 24px;
-            text-align: right;
-        }
-    </style>
+
 </head>
 <body>
     <h1>ژمێرەر</h1>
@@ -52,34 +28,6 @@
         <button onclick="appendOperator('/')">/</button>
     </div>
 
-    <script>
-        let display = document.getElementById('display');
-        let currentInput = '';
 
-        function appendNumber(number) {
-            currentInput += number;
-            display.value = currentInput;
-        }
-
-        function appendOperator(operator) {
-            currentInput += ' ' + operator + ' ';
-            display.value = currentInput;
-        }
-
-        function clearDisplay() {
-            currentInput = '';
-            display.value = '';
-        }
-
-        function calculateResult() {
-            try {
-                currentInput = eval(currentInput).toString();
-                display.value = currentInput;
-            } catch {
-                display.value = 'هەڵەیە';
-                currentInput = '';
-            }
-        }
-    </script>
 </body>
 </html>
